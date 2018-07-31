@@ -1,0 +1,1 @@
+<a href="<?= ADMIN_URL.DS.strtolower($this->name).DS.'edit'.DS.$row->id ?>" title="View and Edit" data-toggle="tooltip" class="btn btn-success"><i class="fa fa-edit"></i></a>

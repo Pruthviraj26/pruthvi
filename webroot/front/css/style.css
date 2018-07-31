@@ -1,0 +1,691 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+}
+a, a:link, a:visited, a:active, a:hover {
+	text-decoration: none;
+	outline: none;
+	-moz-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+/*---------------------------------------------*/
+/*----------- HEADER ------------*/
+header {
+	background: #eee;
+	position: relative;
+	z-index: 5;
+}
+header .navbar-default {
+	background-color: transparent;
+	border: none;
+}
+header .navbar {
+	margin-bottom: 0;
+}
+header .navbar-nav {
+	float: left;
+	margin: 0;
+	display: inline-block;
+}
+header .navbar-default .navbar-nav > li > a {
+	color: #132c3d;
+	text-transform: uppercase;
+	font-size: 16px;
+	padding: 40px 25px;
+	position: relative;
+	z-index: 1;
+}
+header .navbar-default .navbar-nav > li.active > a {
+	background-color: transparent;
+	color: #132c3d;
+}
+header .navbar-default .navbar-nav > li.active > a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	top: -30px;
+	height: 110px;
+	background-color: #cccccc;
+	z-index: -1;
+	border-radius: 20px;
+	-moz-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+header .navbar-default .navbar-nav > li {
+	margin: 0 2px;
+}
+header .navbar-default .navbar-nav > li> a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	top: -30px;
+	height: 0;
+	background-color: #cccccc;
+	z-index: -1;
+	border-radius: 20px;
+	-moz-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+header .navbar-default .navbar-nav > li> a:hover:after {
+	height: 110px;
+}
+header .navbar-default .navbar-nav > li.active > a:hover, header .navbar-default .navbar-nav > li.active > a:focus {
+	background-color: transparent;
+}
+header .navbar-default .navbar-nav > li.active > a:after:hover {
+ height: 110px;
+}
+header .menulinks {
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+header .menulinks li {
+	display: inline-block;
+}
+header .menulinks li .logina {
+	padding: 10px 28px;
+	display: block;
+	margin: 30px 10px;
+	text-transform: uppercase;
+	color: #fff;
+	border-radius: 25px;
+}
+header .menulinks li a.logina {
+	background-color: #b63c00;
+}
+header .menulinks li a.logina:hover, header .menulinks li a.logina:focus {
+	background-color: #961c00;
+}
+header .logo a {
+	display: block;
+	margin-top: 30px;
+}
+header .dropdown-menu {
+	margin-top: 0;
+	padding: 20px;
+	top: 90%;
+	left: -20px;
+}
+header .dropdown-menu li a {
+	margin: 5px 0;
+}
+header .dropdown-menu li {
+	display: inline-block;
+	margin: auto;
+}
+/*---------------------------------------------*/
+
+
+#about {
+	position: relative;
+	top: -179px;
+}
+#howitwork {
+	position: relative;
+	top: -99px;
+}
+#feature {
+	position: relative;
+	top: -179px;
+}
+/*---------------------------------------------*/
+/*----------- BANNER ------------*/
+.bannerdiv {
+	position: relative;
+	margin-top: 100px;
+}
+.bannerdiv img {
+	width: 100%;
+}
+.bannerdiv .banner-content {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 10%;
+	height: 230px;
+	margin: auto;
+	width: 50%;
+}
+.bannerdiv .banner-content strong {
+	font-size: 44px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+.bannerdiv .banner-content strong span {
+	color: #84b600;
+}
+.bannerdiv .banner-content p {
+	width: 80%;
+	font-size: 16px;
+	margin-top: 15px;
+}
+.bannerdiv .banner-content a {
+	padding: 12px 30px;
+	background-color: #b63c00;
+	border-radius: 25px;
+	color: #fff;
+	display: block;
+	font-size: 16px;
+	width: 180px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 20px;
+}
+.bannerdiv .banner-content a:hover, .bannerdiv .banner-content a:focus {
+	background-color: #fff;
+	color: #b63c00;
+}
+/*---------------------------------------------*/
+/*----------- Section ------------*/
+section {
+	padding: 80px 0;
+	position: relative;
+	height: 100%;
+}
+/*---------------------------------------------*/
+/*----------- choicesec ------------*/
+.choicesec {
+	position: relative;
+}
+.choicesec .ccard {
+	border: 1px solid #84b600;
+	margin: 0;
+	padding: 0;
+}
+.choicesec .pad {
+	padding: 0;
+}
+.plan-div {
+	padding: 17px;
+}
+.plan-div input[type="radio"] {
+	display: none;
+}
+.plan-div input[type="radio"]:not(:disabled) ~ label {
+	cursor: pointer;
+}
+.plan-div input[type="radio"]:disabled ~ label {
+	color: #bcc2bf;
+	border-color: #bcc2bf;
+	box-shadow: none;
+	cursor: not-allowed;
+}
+.plan-div strong {
+	display: block;
+	margin-bottom: 10px;
+	color: #FFD200;
+	font-weight: 400;
+	font-size: 22px;
+}
+.plan-div label {
+	height: 100%;
+	display: block;
+	background: #eeeeee;
+	padding: 15px;
+	margin-bottom: 20px;
+	text-align: center;
+	position: relative;
+	-moz-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.plan-div label:hover {
+	background: #84b600;
+	color: #fff;
+}
+.plan-div input[type="radio"]:checked + label {
+	background: #84b600;
+	color: #fff;
+}
+.plan-div input[type="radio"]#control_05:checked + label {
+	background: red;
+	border-color: red;
+}
+.choicesec h1 {
+	font-size: 24px;
+	color: #b63c00;
+	margin: 0;
+	margin-bottom: 20px;
+}
+.checkdiv {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.checkdiv li {
+	display: inline-block;
+	width: 32%;
+	box-sizing: border-box;
+}
+.choicesec span {
+	color: #777777;
+}
+.checksocial {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-top: 20px;
+}
+.checksocial li {
+	display: inline-block;
+	margin-right: 5px;
+}
+.checksocial li a i {
+	font-size: 14px;
+	margin-right: 17px;
+}
+.checksocial li a {
+	color: #fff;
+	padding: 7px 15px;
+	display: block;
+	width: 140px;
+	border-radius: 5px;
+	text-transform: uppercase;
+}
+.checksocial li a.fb:hover, .checksocial li a.gl:hover, .checksocial li a.tw:hover {
+	background-color: #528214;
+	color: #fff;
+}
+.checksocial li a.fb {
+	background-color: #3e77ac;
+}
+.checksocial li a.gl {
+	background-color: #c64434;
+}
+.checksocial li a.tw {
+	background-color: #029cd8;
+}
+/*---------------------------------------------*/
+/*----------- offerdiv ------------*/
+.offerdiv {
+	position: relative;
+}
+.offerdiv .pad {
+	padding: 0;
+	position: relative;
+}
+.offerdiv .pad-left {
+	height: 550px;
+	background: url(../images/offerimg.png);
+	background-size: cover;
+}
+.offerdiv .pad-right {
+	height: 550px;
+	background: url(../images/services.png);
+	background-size: cover;
+}
+.offerdiv .pad .img-bg {
+	width: 100%;
+}
+.offerdiv .offer-content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	color: #fff;
+	border: 2px solid #84b600;
+	background-color: rgba(255,255,255,.2);
+	padding: 40px 60px;
+	width: 100%;
+	left: 120px;
+	z-index: 1;
+	height: 420px;
+	margin: auto;
+}
+.offerdiv .offer-content h2 {
+	font-size: 24px;
+	text-transform: uppercase;
+}
+.offerdiv .offer-content p {
+	line-height: 23px;
+	width: 77%;
+	margin: 30px 0;
+}
+.offerdiv .offer-content a {
+	width: 165px;
+	padding: 13px;
+	text-align: center;
+	color: #b63c00;
+	background-color: #fff;
+	box-shadow: 0 0 20px rgba(0,0,0,.5);
+	text-transform: uppercase;
+	border-radius: 25px;
+	display: block;
+	font-weight: 600;
+}
+.offerdiv .offer-content a:hover, .offerdiv .offer-content a:focus {
+	background-color: #b63c00;
+	color: #fff;
+}
+/*---------------------------------------------*/
+.servicediv {
+	position: absolute;
+	left: 180px;
+	top: 0;
+	bottom: 0;
+	height: 420px;
+	margin: auto;
+	width: 65%;
+	padding: 40px 0;
+}
+.carddiv {
+	margin-bottom: 30px;
+	position: relative;
+	padding-left: 70px;
+}
+.carddiv img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	-moz-transition: all 500ms ease-in-out;
+	-webkit-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+.carddiv h3 {
+	margin: 0;
+	margin-bottom: 8px;
+	text-transform: uppercase;
+	-moz-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+	transform: rotateX(0deg);
+	font-size: 24px;
+}
+.carddiv:hover h3 {
+	color: #B63C00;
+}
+.carddiv:hover img {
+	transform: rotateX(360deg);
+}
+.carddiv p {
+	color: #555555;
+}
+/*---------------------------------------------*/
+/*----------- featuresec ------------*/
+
+.heading {
+	font-size: 30px;
+	text-align: center;
+	display: block;
+	margin-bottom: 60px;
+	color: #b63c00;
+	text-transform: uppercase;
+}
+.featuresec .fcard {
+	box-shadow: 0 0 20px #ccc;
+	-moz-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+.featuresec .fcard:hover {
+	background-color: #84b600;
+}
+.featuresec .fcard .fdetail {
+	padding: 20px;
+}
+.featuresec .fcard h5 {
+	margin: 0;
+	font-weight: 600;
+	font-size: 16px;
+	margin-bottom: 10px;
+	-moz-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+.featuresec .fcard p {
+	margin: 0;
+	color: #555555;
+	-moz-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+.featuresec .fcard:hover p, .featuresec .fcard:hover h5 {
+	color: #fff;
+}
+/*---------------------------------------------*/
+/*----------- footer ------------*/
+footer {
+	padding: 80px 0;
+	background: #292929 url(../images/footerimg.png) center;
+}
+footer img {
+	display: block;
+	margin: auto;
+}
+footer h6 {
+	margin: 0;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #84b600;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 25px;
+}
+footer .inputdiv {
+	margin: auto;
+	text-align: center;
+	position: relative;
+	width: 400px;
+}
+footer .inputdiv input {
+	background-color: #292929;
+	padding: 10px 80px 10px 20px;
+	color: #fff;
+	border-radius: 25px;
+	border: 2px solid #486400;
+	width: 100%;
+	-moz-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+footer .inputdiv input:focus {
+	border: 2px solid #fff;
+	box-shadow: none;
+	outline: none;
+}
+footer .inputdiv a {
+	color: #fff;
+	background-color: #7faf02;
+	height: 100%;
+	width: 60px;
+	font-size: 26px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	line-height: 38px;
+	padding-right: 5px;
+	border-radius: 0 25px 25px 0;
+}
+
+footer .inputdiv a:hover {
+	background-color: #fff;
+	color: #7FAF02;
+}
+footer .social-links {
+	margin-top: 30px;
+	display: block;
+	text-align: center;
+}
+footer .social-links li {
+	display: inline-block;
+	margin: 0 5px;
+}
+.copyright {
+	background-color: #292929;
+	color: #555555;
+	text-align: center;
+	padding: 18px;
+	text-transform: uppercase;
+}
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+/*----------- INNER-FAQ ------------*/
+
+.faq-card {
+	box-shadow: 0 0 10px #fff;
+	-moz-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+	background-color: #f6f6f6;
+	margin-bottom: 30px;
+	min-height: 190px;
+}
+.faq-card:hover{		
+	box-shadow:0 0 20px #ccc;
+}
+.faq-card span {
+	display: block;
+	font-size: 22px;
+	color: #6A6A6A;
+	padding: 10px;
+	border-bottom: 1px solid #ECECEC;
+	-moz-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+.faq-card:hover span{
+	background-color: #b63c00;	
+	color:#fff;
+}
+.faq-card p {
+	color: #444;
+	padding: 15px;
+	margin: 0;
+}
+
+
+.login-fild-form {
+	padding-right: 15px;
+	
+}
+
+
+.login-fild-form input,.login-fild-form select {
+	border-radius: 0px;
+	margin-bottom: 15px;
+	
+}
+
+
+.login-fild-form input:focus,.login-fild-form select:focus {
+	border: 1px solid #b63c00;
+	box-shadow: none;
+		
+
+
+}
+
+
+
+
+
+.login-fild-form button {
+	
+	width: 100%;
+	border-radius: 0px;
+	background-color: #b63c00;
+	border: 1px solid #b63c00;
+	
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+/*------------------------ CARD CSS 8-8-17 ----------------------*/
+
+.fcards{
+	padding: 10px;
+	background-color: #f1f1f1;
+	margin-bottom: 30px;
+	    position: relative;
+	    min-height: 275px;
+}
+
+.fcard-details {
+    background-color: #fff;
+    padding: 10px 20px;
+	position: relative;
+	margin-bottom: 10px;
+}
+.atmicon {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 20px;
+    bottom: 0;
+    height: 50px;
+    width: 60px;
+    font-size: 50px;
+    text-align: center;
+    margin: auto;
+    color: #ddd;
+}
+.atmdet{
+	color: #b63c00;
+	font-size: 17px;
+}
+.fcaption{
+	position: relative;
+}
+.carddeleteicon {
+    position: absolute;
+    top: auto;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #b63c00;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 50px 0 0 0;
+    display: block;
+    padding: 3px;
+    padding-left: 8px;
+    font-size: 12px;
+}
+.carddeleteicon:hover,.carddeleteicon:focus{
+		background-color: #568716;
+	color: #fff;
+}
+
+.caccept{
+		color: #568716;
+}
+
+footer .footer-links {
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+}
+footer .footer-links li {
+	color: #fff;
+	display: inline-block;
+}
+footer .footer-links li a{
+	color: #fff;
+}
+
+#newsLetterMsg {
+	    text-align: center;
+    
+    margin: 20px;
+}

@@ -1,0 +1,436 @@
+
+@media screen and (min-width: 1920px) {
+}
+
+@media screen and (min-width: 1600) and (max-width: 1900) {
+}
+
+@media screen and (max-width: 1024px) {
+header .navbar-default .navbar-nav > li > a {
+	font-size: 14px;
+	padding: 40px 15px;
+}
+header .navbar-nav {
+	margin-left: 0;
+}
+
+.bannerdiv .banner-content strong {
+	font-size: 36px;
+}
+.checksocial li a {
+	width: 125px;
+}
+.checksocial li a i {
+	margin-right: 10px;
+}
+.offerdiv .offer-content h2 {
+	font-size: 20px;
+}
+.offerdiv .offer-content {
+	padding: 0px 40px;
+	left: 50px;
+	height: 350px;
+}
+.offerdiv .offer-content p {
+	margin: 15px 0;
+}
+.servicediv {
+	left: 90px;
+	height: 350px;
+	padding: 20px 0;
+	width: 75%;
+}
+.carddiv {
+	margin-bottom: 20px;
+}
+.carddiv h3 {
+	font-size: 20px;
+}
+.featuresec .fcard h5 {
+	font-size: 15px;
+}
+.plan-div {
+	padding: 10px;
+}
+.choicesec h1 {
+	font-size: 20px;
+}
+.choicesec span {
+	font-size: 13px;
+}
+}
+
+@media screen and (max-width: 990px) {
+header .navbar-nav {
+	margin-left: 30px;
+}
+header .navbar-default .navbar-nav > li > a {
+	padding: 40px 8px;
+}
+
+header .menulinks li .logina {
+	padding: 10px 15px;
+margin: 30px 0;
+
+}
+.choicesec h1 {
+	font-size: 16px;
+	margin-bottom: 6px;
+}
+.plan-div label {
+	margin-bottom: 4px;
+	padding: 8px 15px;
+}
+.checksocial li a {
+	width: 105px;
+	padding: 4px 8px;
+}
+.checksocial li a i {
+	margin-right: 5px;
+}
+.checksocial {
+	margin-top: 10px;
+}
+.bannerdiv .banner-content strong {
+	font-size: 26px;
+}
+.bannerdiv .banner-content p {
+	width: auto;
+	font-size: 14px;
+}
+.bannerdiv .banner-content a {
+	padding: 12px 10px;
+	width: 160px;
+}
+.bannerdiv .banner-content {
+	height: 200px;
+}
+.offerdiv .offer-content {
+	padding: 30px 50px;
+	left: 0;
+	height: 450px;
+	width: 80%;
+	right: 0;
+	margin: auto;
+	bottom: -80px;
+	top: auto;
+}
+.offerdiv .offer-content h2 {
+	font-size: 24px;
+}
+.offerdiv .offer-content p {
+	width: auto;
+	margin: 30px 0;
+}
+.carddiv {
+	margin-bottom: 50px;
+}
+.carddiv h3 {
+	font-size: 22px;
+}
+.offerdiv .pad-left {
+	height: 450px;
+	background: url(../images/offerimg.png);
+	background-size: cover;
+}
+.servicediv {
+	left: 90px;
+	height: 350px;
+	padding: 20px 0;
+	width: 75%;
+	top: 70px;
+}
+header .dropdown-menu {
+	margin-top: 0;
+	padding: 20px;
+	top: 90%;
+	left: -60px;
+}
+.faq-card {
+	min-height: auto;
+}
+}
+
+@media screen and (max-width: 767px) {
+.logo {
+	display: inline-block;
+}
+header .logo a {
+	display: block;
+	margin-top: 15px;
+}
+.navbar-header {
+	display: inline-block;
+	float: right;
+	margin-top: 10px;
+}
+.navbar-header .icon-bar {
+	background-color: #b63c00;
+}
+header .navbar {
+	margin-bottom: 0;
+	min-height: 0;
+}
+.bannerdiv .banner-content strong {
+	font-size: 20px;
+}
+.bannerdiv .banner-content p {
+	font-size: 12px;
+}
+.bannerdiv .banner-content a {
+	padding: 8px 8px;
+	width: 160px;
+}
+.bannerdiv .banner-content {
+	height: 170px;
+}
+.ccard img{
+	width:100%;
+}
+.choicesec h1 {
+	font-size: 18px;
+	margin-bottom: 16px;
+	margin-top: 10px;
+}
+.plan-div label {
+	margin-bottom: 20px;
+	padding: 10px 15px;
+}
+.checksocial li a {
+	width: 135px;
+	padding: 8px 20px;
+}
+.offerdiv .offer-content {
+	bottom: -50px;
+	width: 83%;
+}
+.featuresec .fcard {
+	width: 55%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+header .navbar-default .navbar-nav > li > a {
+	padding: 15px 8px;
+}
+header .navbar-nav {
+	float: none;
+	display: block;
+	margin-left: 0;
+}
+
+header .navbar-default .navbar-nav > li.active > a::after {
+	height: 100px;
+}
+header .navbar-default .navbar-nav > li.active > a {
+	background-color: transparent;
+	color: #132c3d;
+	overflow: hidden;
+}
+header .navbar-default .navbar-nav > li > a:hover::after {
+	height: 100px;
+}
+header .navbar-default .navbar-nav > li {
+	margin: 4px 2px;
+	overflow: hidden;
+}
+header .menulinks {
+	margin: 0;
+	padding: 0;
+	float: none;
+}
+header .menulinks li a {
+	padding: 10px 25px;
+}
+.servicediv {
+	left: 90px;
+	height: 350px;
+	padding: 20px 0;
+	width: 75%;
+	top:0;
+}
+
+#about{
+	position:relative;
+	top:-119px;
+}
+#howitwork{
+	position:relative;
+	top:-60px;
+}
+#feature{
+	position:relative;
+	top:-130px;
+}
+header .dropdown-menu {
+	margin-top: 0;
+	padding: 20px;
+	top: 80%;
+	left: 0px;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+	.bannerdiv .banner-content strong {
+	font-size: 16px;
+}
+.bannerdiv .banner-content p {
+	display: none;
+}
+.bannerdiv .banner-content strong {
+	font-size: 21px;
+	display: block;
+	text-align: center;
+}
+.bannerdiv .banner-content {
+	height: 80px;
+	width: 100%;
+	left: 0;
+	right: 0;
+}
+.bannerdiv .banner-content a {
+	padding: 6px 8px;
+	width: 155px;
+	margin: auto;
+	margin-top: 20px;
+	font-size: 14px;
+}
+.bannerdiv .banner-content strong span {
+	color:#fff;
+}
+.offerdiv .offer-content {
+	padding: 0px 10px;
+	left: 0;
+	height: 320px;
+	width: 93%;
+	right: 0;
+	margin: auto;
+	bottom: 25px;
+	top: auto;
+}
+.offerdiv .offer-content p {
+	width: auto;
+	margin: 10px 0;
+}
+.carddiv {
+	margin-bottom: 30px;
+}
+.carddiv h3 {
+	font-size: 16px;
+	margin-bottom: 4px;
+}
+.servicediv {
+	left: 0;
+	height: 350px;
+	padding: 20px 30px;
+	width: 100%;
+}
+.featuresec .fcard {
+	width: 75%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+.offerdiv .pad-left {
+	height: 370px;
+}
+.offerdiv .pad-right {
+	height: 370px;
+}
+}
+
+@media screen and (max-width: 360px) {
+.bannerdiv .banner-content strong {
+	font-size: 16px;
+	display: block;
+	text-align: center;
+	font-weight: 600;
+}
+.bannerdiv .banner-content a {
+	margin-top: 10px;
+}
+.bannerdiv .banner-content {
+	height: 60px;
+	width: 100%;
+	left: 0;
+	right: 0;
+}
+.plan-div label {
+	margin-bottom: 20px;
+	padding: 10px 0;
+}
+.checksocial li a {
+	width: 170px;
+	padding: 8px 40px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.checksocial {
+	margin: auto;
+	margin-top: 10px;
+	text-align: center;
+}
+.logo img{
+	width: 200px;
+}
+.offerdiv .pad-left {
+	height: 450px;
+}
+.offerdiv .pad-right {
+	height: 450px;
+}
+.offerdiv .offer-content {
+	height: 410px;
+}
+.carddiv img {
+	position: relative;
+	left: 0;
+	top: 0;
+	-moz-transition: all 500ms ease-in-out;
+	-webkit-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+.carddiv {
+	position: relative;
+	padding-left: 0;
+	text-align: center;
+}
+.carddiv h3 {
+	font-size: 16px;
+	margin-bottom: 4px;
+	margin: 15px 0;
+}
+.offerdiv .pad-right {
+	height:650px;
+}
+.servicediv {
+	left: 0;
+	height: auto;
+	padding: 20px 30px;
+	width: 100%;
+	margin-top: 30px;
+}
+.featuresec .fcard {
+	width: auto;
+	margin: auto;
+	margin-bottom: 50px;
+}
+footer h6 {
+	margin: 0;
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #84b600;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 25px;
+}
+footer .inputdiv {
+	margin: auto;
+	text-align: center;
+	position: relative;
+	width: 250px;
+}
+}
+
+
+@media screen and (max-width: 320px) {
+}

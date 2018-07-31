@@ -1,0 +1,1 @@
+<a href="<?= ADMIN_URL.DS.strtolower($this->name).DS.'remove'.DS.$row->id ?>" class="removeIt btn btn-danger"  title="Permentaly Delete" data-toggle="tooltip"><i class="fa fa-trash"></i></a>

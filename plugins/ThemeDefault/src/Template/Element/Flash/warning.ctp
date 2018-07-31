@@ -1,0 +1,1 @@
+<div id="flash-<?= h($key) ?>" class="alert alert-warning"><?= h($message) ?></div>

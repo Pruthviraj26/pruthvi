@@ -1,0 +1,83 @@
+
+<div class="about">
+ 			<h2><?= $seoPost->post['title'] ?></h2>
+ 			<div class="about-top">
+ 				 <div class="col-md-6 ab-top">
+ 				 	<img src="	<?= SITE_URL.'/img/uploads/'.$seoPost->post['image'] ?>" class="img-responsive" alt="">
+ 				 </div>
+ 				 <div class="col-md-6 ab-top">
+ 				 	
+ 				 	<?= $seoPost->post['content'] ?>
+ 				 </div>
+ 				 	<div class="clearfix"> </div>
+ 			</div>
+		<div class="team_grid">
+       		<h3 class="m_1">Meet Our Team</h3>
+       	  <div class="span_3">
+       	   <div class="col-md-6 ab-top">
+       	  	<ul class="span_2">
+       	  		<li class="span_2-left"><img src="images/6.jpg" class="img-responsive" alt=""></li>
+       	  		<li class="span_2-right">
+       	  		  <h3>Gummies lollipop</h3>
+       	  		
+       	  		  <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+       	  		</li>
+       	  		<div class="clearfix"> </div>
+       	  	</ul>
+       	   </div>
+       	   <div class="col-md-6 ab-top">
+       	  	<ul class="span_2">
+       	  		<li class="span_2-left"><img src="images/5.jpg" class="img-responsive" alt=""></li>
+       	  		<li class="span_2-right">
+       	  		  <h3>Gummies lollipop</h3>
+       	  		  
+       	  		  <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+       	  		</li>
+       	  		<div class="clearfix"> </div>
+       	  	</ul>
+       	   </div>
+       	   		<div class="clearfix"> </div>
+       	  </div>
+       	  <div class="span_4">
+       	   <div class="col-md-6 ab-top">
+       	  	<ul class="span_2">
+       	  		<li class="span_2-left"><img src="images/1.jpg" class="img-responsive" alt=""></li>
+       	  		<li class="span_2-right">
+       	  		  <h3>Gummies lollipop</h3>
+       	  		 
+       	  		  <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+       	  		  
+       	  		</li>
+       	  		<div class="clearfix"> </div>
+       	  	</ul>
+       	   </div>
+       	   <div class="col-md-6 ab-top">
+       	  	<ul class="span_2">
+       	  		<li class="span_2-left"><img src="images/4.jpg" class="img-responsive" alt=""></li>
+       	  		<li class="span_2-right">
+       	  		  <h3>Gummies lollipop</h3>
+       	  		 
+       	  		  <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+       	  		  
+       	  		</li>
+       	  		<div class="clearfix"> </div>
+       	  	</ul>
+       	   </div>
+       	   <div class="clearfix"> </div>
+       	  </div>
+     </div>
+     <div class="testimonial">
+     	
+     		<h3>Our Testimonials</h3>
+     		<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum</p>
+     	    <ul class="test_icon">
+     	    	<li><a href="#"><img src="images/1.jpg" class="img-responsive"></a></li>
+     	    	<li><a href="#"><img src="images/2.jpg" class="img-responsive"></a></li>
+     	    	<li><a href="#"><img src="images/3.jpg" class="img-responsive"></a></li>
+     	    	<li><a href="#"><img src="images/4.jpg" class="img-responsive"></a></li>
+     	    	<li><a href="#"><img src="images/5.jpg" class="img-responsive"></a></li>
+     	    	<div class="clearfix"> </div>
+     	    </ul>
+     	
+     </div>
+    </div>
