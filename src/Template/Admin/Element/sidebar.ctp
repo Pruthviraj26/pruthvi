@@ -1,4 +1,63 @@
-
+<aside class="menu-sidebar2">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/icon/logo-white.png" alt="Cool Admin" />
+                </a>
+            </div>
+            <div class="menu-sidebar2__content js-scrollbar1">
+                <div class="account2">
+                <?php if(strpos($authUser['image'],'http')!==false){ ?>
+                  
+                  <div class="image img-cir img-120">
+              
+                        <img src="<?= $authUser['image'] ?>" alt="..." class="img-circle profile_img">
+                    </div>
+								<?php }else{  ?>
+                <img src="<?= SITE_URL.'/img/icon/'.$authUser['image'] ?>" alt="..." class="img-circle profile_img">
+                <?php } ?>
+                
+                    
+                    <h4 class="name"><?= $authUser['first_name'] ?>&nbsp;<?= $authUser['last_name'] ?></h4>
+                    <a href="<?= ADMIN_URL ?>/users/logout">Sign out</a>
+                </div>
+                <nav class="navbar-sidebar2">
+                    <ul class="list-unstyled navbar__list">
+                      
+										<?php foreach($themeConfig['Post'] as $postType=>$postOption){ ?>
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="<?= $postOption['labels']['icon'] ?>"></i><?= $postOption['labels']['plural_name'] ?>
+                                <span class="arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </span>
+                            </a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                         
+                                <?php if($postOption['add_new_link']){ ?>
+													  <li><a href="<?= ADMIN_URL.'/posttype/'.$postType.'/add' ?>">Add New</a></li>
+													<?php } ?>
+														<?php 
+												if(isset($themeConfig['Texonomies'])){
+												foreach($themeConfig['Texonomies'] as $texonomyType=>$texonomyOption){
+														if(in_array($postType,$texonomyOption['type'])){	?>	
+													<li>
+														<a href="<?= ADMIN_URL.'/posttype/'.$postType.'/texonomy/'.$texonomyType ?>">									
+																<?= ucfirst($texonomyOption['option']['labels']['name']) ?>
+														</a>														
+													</li>
+													
+                          <?php		} ?>
+															
+                          <?php		} ?>
+                          <?php		} ?>  
+                            </ul>
+                        </li>
+                    <?php } ?>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <?php /*
 <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
@@ -61,7 +120,7 @@
 													  <li><a href="<?= ADMIN_URL.'/posttype/'.$postType.'/add' ?>">Add New</a></li>
 													<?php } ?>
 														<?php 
-												if(isset($themeConfig['Texonomies']))
+												if(isset($themeConfig['Texonomies'])){
 												foreach($themeConfig['Texonomies'] as $texonomyType=>$texonomyOption){
 														if(in_array($postType,$texonomyOption['type'])){	?>	
 													<li>
@@ -74,7 +133,8 @@
 															
 													
 															
-														 } ?>
+                             } 
+                          }?>
 												</ul>
 											</li>
 									<?php }?>
@@ -113,3 +173,4 @@
             <!-- /menu footer buttons -->
           </div>
         </div>
+       */ ?>

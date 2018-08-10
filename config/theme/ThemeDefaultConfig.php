@@ -67,6 +67,7 @@ $texonomy['topics'] = array('type'=>array('teams'),'option'=>array(
 
 $data['Texonomies'] = $texonomy;
 
+
 $post['post'] = array(
       'labels' => array(
         'name' => __( 'Post' ),

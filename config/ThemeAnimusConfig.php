@@ -1,6 +1,8 @@
 <?php
 
-$texonomy['categories'] = array('type'=>array('post','sliders','menu','pages'),'option'=>array(
+$texonomy['categories'] = array(
+						'type'=>array('post','sliders','menu','pages','school'),
+						'option'=>array(
 						'hierarchical' => true,
 						'labels'=>array(
 													'name' => __( 'Categoies', 'taxonomy general name' ),
@@ -81,6 +83,19 @@ $post['post'] = array(
       'rewrite' => array('slug' => 'post'),
     );
 
+		$post['schools'] = array(
+      'labels' => array(
+        'name' => __( 'School' ),
+        'icon' => 'fa fa-dot-circle-o',
+        'singular_name' => __( 'School' ),
+        'plural_name' => __( 'School' )
+      ),
+			'add_new_link'=>true,
+			'view_all'=>true,
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'school'),
+    );
 
 
 $post['sliders'] = array(

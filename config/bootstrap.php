@@ -243,7 +243,7 @@ $allowedHost = ['localhost','192.168.1.171'];
 	}
 																 
 	
-define('SITE_URL','http://'.$host.'/projects/ud/webmynecake');
+define('SITE_URL','http://'.$host.'/projects/ud/pruthvi');
 define('ADMIN_URL',SITE_URL.'/admin');
 define('FRONT_URL',SITE_URL.'/front');
 Configure::load('templatesConfig','default');
