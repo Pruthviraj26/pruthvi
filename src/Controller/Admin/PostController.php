@@ -13,7 +13,7 @@ class PostController extends AppController
 		public function index(){
 			
 			$posttype = $this->request->getParam('posttype');
-			$this->set('posttype',$posttype);
+			
 			$termsList = [];
 			foreach($this->themeConfig['Texonomies'] as $texonomyType=>$texonomyOption){
 				if(in_array($posttype,$texonomyOption['type'])){	
@@ -26,6 +26,8 @@ class PostController extends AppController
 			$this->set('termsList',$termsList);
 			$this->paginate['conditions']['AND'][] = ['post.post_type'=>$posttype];
 			parent::index();
+			
+			$this->set('posttype',$posttype);
 		}
 		public function add(){
 			
@@ -37,9 +39,9 @@ class PostController extends AppController
 			parent::add();	
 				$saveedPost = $this->apiResponse['data'];
 			if($this->request->is(['PUT']) or $this->request->is(['POST'])){
+				$posttype = $this->request->data['post_type'];
 				
-			
-			
+				
 				
 				if(isset($this->request->data['seo'])){
 					$seoData = $this->request->data['seo'];
@@ -97,28 +99,37 @@ class PostController extends AppController
 								
 						
 				$data = $this->request->data();
-				if(isset($data['terms'])){
 				
+				if(isset($data['terms'])){
+					
 					foreach($data['terms'] as $texonomy=>$terms){
 						
 						if(isset($terms) and is_array($terms) and $terms!= ""){
-					
-							foreach($terms as $id=>$term){
+						
+							foreach($terms as $term_id=>$term){
 								
-									$postterm['term_id'] = $id;
+									
+									$postterm['term_id'] = $term_id;
 									$postterm['post_id'] = $saveedPost->id;
 									$postterm['texonomy'] = $texonomy;
 
+									
 									$entity = $PostTerms->newEntity();					
 									$patchEntity = $PostTerms->patchEntity($entity, $postterm, ['associated' => []]);
 									$PostTerms->save($patchEntity);
+									
 							}
+							
 						}
 					}
 				}
 				
+				if($this->themeConfig['Post'][$posttype]['view_all']){
+					$this->redirect(ADMIN_URL.'/posttype/'.$posttype);
+				}else{
+					$this->redirect(ADMIN_URL.'/posttype/'.$posttype.'/add');
+				}
 				
-				$this->redirect(ADMIN_URL.'/posttype/'.$posttype);			 	
 			}
 			
 			if($this->request->getParam('id')){

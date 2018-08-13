@@ -1,5 +1,5 @@
  
-<link rel="stylesheet" href="<?=SITE_URL.'/backend/'?>/bs-iconpicker/css/bootstrap-iconpicker.min.css">
+<link rel="stylesheet" href="bs-iconpicker/css/bootstrap-iconpicker.min.css">
 <div class="row">
            
 	<div class="col-md-6 col-sm-12 col-xs-12">

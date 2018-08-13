@@ -135,12 +135,13 @@ $post['menu'] = array(
         'icon' => 'fa fa-bars',
         'singular_name' => __( 'Menu' ),
         'plural_name' => __( 'Menu' )
-      ),
+			),
+			'custom_form'=>true,
 			'add_new_link'=>true,
 			'view_all'=>false,
       'public' => true,
       'has_archive' => true,
-      'rewrite' => array('slug' => 'post'),
+      'rewrite' => array('slug' => 'menu'),
     );
 $data['Post'] = $post;
 

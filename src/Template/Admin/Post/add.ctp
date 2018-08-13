@@ -5,9 +5,9 @@
     opacity:0;
 
     height: 150px;
-    width: 210px;
+    width: 150px;
     background-image: url(<?= SITE_URL.'/img/default.png' ?>);
-		background-size: 200px 150px;
+		background-size: 150px 150px;
 	}
 	#preview {
 		 position: absolute; 
@@ -21,14 +21,14 @@
 	@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 
 </style>
-
+<?php $propertyPost = $themeConfig['Post'][$posttype]; ?>
 <?php echo $this->Form->create($post,['id'=>'featureForm','url'=>ADMIN_URL.'/post/add','enctype' => 'multipart/form-data']); ?>
 <div class="row">
 	<div class="col-md-9 col-sm-12 col-xs-12">
-		<div  class="form-horizontal" >
+
 		
 			<?php $new = $post->isNew();	 
-						echo $this->element('form_start',['formTitle'=>ucfirst($posttype)]);
+						echo $this->element('form_start',['formTitle'=>$propertyPost['labels']['singular_name']]);
 						echo $this->Form->input('id',['type'=>'hidden','value'=> !$new ? $post->id:'']); 
 						echo $this->Form->control('post_type',['type'=>'hidden','value'=> $posttype,'required']);
 						echo $this->Form->control('title',['value'=> !$new ? $post->title:'','required']);		
@@ -39,17 +39,10 @@
 						<label class="control-label" for="last_name">Content</label>
 						<textarea  name="content" type="" class="ckeditor form-control" required="required" id="container" rows="5" aria-required="true"><?= !$new ? $post->content:'' ?></textarea> </div>
 					</div>
-			<?php
-			echo $this->element('form_end');
-			?>
-			
-	
-		
-			
-			
+			<?php echo $this->element('form_end'); ?>
+
 			
 			<?php
-				$propertyPost = $themeConfig['Post'][$posttype];
 				//	pr($propertyPost['meta']);
 
 					foreach($propertyPost['meta'] as $group=>$meta){
@@ -82,39 +75,34 @@
 						}
 						echo $this->element('form_end');
 					}
-			
-			
-			
-			
-				echo $this->element('form_start',['formTitle'=>'OTHER INFORMATION']);
-			?>			
-			<div class="input_fields_wrap"><div class="add_field_button" id="add_new">Add More Fields</div></div>
-			<?php
-				echo $this->element('form_end');
 			?>
+			<?php 
+			$addMore ='<button id="add_new" type="reset" class="btn btn-primary btn-sm add_field_button"> <i class="fa fa-plus"></i> Add More </button>';
+			echo $this->element('form_start',['formTitle'=>'OTHER INFORMATION','elements'=>[$addMore]]); ?>			
+			<div class="input_fields_wrap"></div>			
+			<?php echo $this->element('form_end'); ?>
 			
-			<?php echo $this->element('form_seo',['seo'=>isset($seo)?$seo:null]); ?>
-			</div>
-	</div>
+			
+				<?php  $this->element('form_seo',['seo'=>isset($seo)?$seo:null]); ?>
+			
+			
 	
+
 	
 	
 	<div class="col-md-3 col-sm-12 col-xs-12">
-		
+
 
 		
+		<?php echo $this->element('form_start',['formTitle'=>'Publish']); ?>
+		<input type="submit" class="btn btn-lg btn-info btn-block" value="Save">
+		<?php  echo $this->element('form_end'); ?>
+
 		<?php 
-					
-			echo $this->element('form_start',['formTitle'=>'Publish']);
-			echo $this->Form->submit();
-			echo $this->element('form_end');
-			
 			foreach($termsList as $texonomy=>$terms){
-					echo $this->element('form_start',['formTitle'=>ucfirst($texonomy)]);
-				
-/*					echo $this->Form->select("terms[$texonomy]",$terms,['type' => 'checkbox','class'=>'form-control','multiple' => true,'default'=>!$new?$termsForPost:'']);  */
-				
-						echo $this->element('texonomy_checkbox',['terms'=>$terms,'texonomy'=>$texonomy,'termsForPost'=>!$new?$termsForPost:'']);
+					echo $this->element('form_start',['formTitle'=>ucfirst($texonomy)]);				
+					//echo $this->Form->select("terms[$texonomy]",$terms,['type' => 'checkbox','class'=>'form-control','multiple' => true,'default'=>!$new?$termsForPost:'']);  				
+					echo $this->element('texonomy_checkbox',['terms'=>$terms,'texonomy'=>$texonomy,'termsForPost'=>!$new?$termsForPost:'']);
 					echo $this->element('form_end');
 			}
 
@@ -126,8 +114,8 @@
 		?>
 			
 	</div>
-</div>
-<?php 		echo $this->Form->end();  ?>
+
+<?php echo $this->Form->end();  ?>
 
 	
 
@@ -149,7 +137,7 @@
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div class="form-group" ><div class="col-md-6 col-sm-6 col-xs-12"><label class="control-label" for="excerpt">Name</label><input type="text" name="othermeta[key][]" class="form-control"></div><div class="col-md-6 col-sm-6 col-xs-12"><label class="control-label" for="excerpt">Value</label><input type="text" name="othermeta[value]" class="form-control"></div></div>'); //add input box
+            $(wrapper).append('<div class="form-group row" ><div class="col-md-6 col-sm-6 col-xs-12"><label class="control-label" for="excerpt">Name</label><input type="text" name="othermeta[key][]" class="form-control"></div><div class="col-md-6 col-sm-6 col-xs-12"><label class="control-label" for="excerpt">Value</label><input type="text" name="othermeta[value]" class="form-control"></div></div>'); //add input box
         }
     });
     

@@ -3,7 +3,7 @@ $config = [
     'Templates'=>[
         'adminForm' => [
             'formStart' => '<form class="form-horizontal" {{attrs}}>',
-            'label' => '<label class="control-label" {{attrs}}>{{text}}</label>',
+            'label' => '<label class="form-control-label" {{attrs}}>{{text}}</label>',
             'input' => '{{hint}}<input name ="{{name}}" type="{{type}}" class="form-control" {{attrs}} >',		
 						
 						'optgroup' => '<optgroup label="{{label}}"{{attrs}}>{{content}}</optgroup>', 
@@ -22,6 +22,7 @@ $config = [
                          {{content}}
                        
                       </div>',
+                  
 					
 					 
             'checkContainer' => '',

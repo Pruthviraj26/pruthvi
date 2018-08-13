@@ -1,13 +1,16 @@
 
-
-<?php echo $this->element('table_start',['tableTitle'=>$viewTitle]);
+<?php echo $this->element('table_start',['tableTitle'=>$posttype,'postType'=>$posttype]);
 
 ?>
 
                         <thead>
                           <tr class="headings">
                           <th>
+                             
+                              <label class="au-checkbox">
                               <input type="checkbox" id="selectAll" name="selectAll" >
+                                                            <span class="au-checkmark"></span>
+                                                        </label>
                             </th>
                             <th class="column-title">Sr.</th>
                             <th class="column-title">Name</th>
@@ -24,18 +27,29 @@
 													<?php foreach($post as $index=>$row) { ?>
                           <tr class="even pointer">
                            <td class="a-center ">
-                              <input type="checkbox" class="ids" name="ids[<?= $row->id ?>]">
+                           <label class="au-checkbox">
+                           <input type="checkbox" class="ids" name="ids[<?= $row->id ?>]">
+                                                            <span class="au-checkmark"></span>
+                                                        </label>
+
+                              
                             </td>
-														<th><?= ++$index ?></th>
+														<td><?= ++$index ?></td>
                             <td><?= $row->title ?></td>
                             <td><img src="<?= SITE_URL.'/img/icon/'.$row->image ?>"></td>																											
 														<td><?= $row->description ?></td>
 														
+                                                       
+                                               
+
 															<td>
-																<?= $this->element('table_change_status_toggel',['row'=>$row])?>
-															<a href="<?= ADMIN_URL ?>\posttype\<?=$posttype?>\edit\<?= $row->id ?>" title="" data-toggle="tooltip" class="btn btn-success" data-original-title="View and Edit"><i class="fa fa-edit"></i></a>
+                          <div class="table-data-feature">
+                                <?= $this->element('table_change_status_toggel',['row'=>$row])?>
+
+															<a href="<?= ADMIN_URL ?>\posttype\<?=$posttype?>\edit\<?= $row->id ?>" title="" data-toggle="tooltip" class="item btn btn-success" data-original-title="View and Edit"><i class="fa fa-edit"></i></a>
 										
-                            		<?= $this->element('table_delete_btn',['row'=>$row])?>
+                                <?= $this->element('table_delete_btn',['row'=>$row])?>
+                                </div>
                             	</td>
                             	
 

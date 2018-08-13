@@ -1,8 +1,15 @@
+<style>
+  .account2{
+    padding: 20px;
+  }
+</style>
 <aside class="menu-sidebar2">
             <div class="logo">
+              <center>
                 <a href="#">
-                    <img src="images/icon/logo-white.png" alt="Cool Admin" />
+                    <img src="<?= SITE_URL.'/img/uploads/'.$siteconfig->header_logo_image ?>" alt="Cool Admin" />
                 </a>
+                <center>
             </div>
             <div class="menu-sidebar2__content js-scrollbar1">
                 <div class="account2">
@@ -32,6 +39,62 @@
                                 </span>
                             </a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
+                            <?php if($postOption['view_all']){ ?>
+													<li><a href="<?= ADMIN_URL.'/posttype/'.$postType ?>">View All <?= ucfirst($postType) ?></a></li>
+													<?php } ?>  
+                                <?php if($postOption['add_new_link']){ ?>
+													  <li><a href="<?= ADMIN_URL.'/posttype/'.$postType.'/add' ?>">Add New</a></li>
+													<?php } ?>
+                                                   
+														<?php 
+												if(isset($themeConfig['Texonomies'])){
+												foreach($themeConfig['Texonomies'] as $texonomyType=>$texonomyOption){
+														if(in_array($postType,$texonomyOption['type'])){	?>	
+													<li>
+														<a href="<?= ADMIN_URL.'/posttype/'.$postType.'/texonomy/'.$texonomyType ?>">									
+																<?= ucfirst($texonomyOption['option']['labels']['name']) ?>
+														</a>														
+													</li>
+                                                    
+													
+                          <?php		} ?>
+															
+                          <?php		} ?>
+                          <?php		} ?>  
+                            </ul>
+                        </li>
+                    <?php } ?>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <aside class="menu-sidebar2 js-right-sidebar d-block d-lg-none">
+                <div class="logo">
+                    <a href="#">
+                        <img src="images/icon/logo-white.png" alt="Cool Admin" />
+                    </a>
+                </div>
+                <div class="menu-sidebar2__content js-scrollbar2">
+                    <div class="account2">
+                        <div class="image img-cir img-120">
+                            <img src="images/icon/avatar-big-01.jpg" alt="John Doe" />
+                        </div>
+                        <h4 class="name">john doe</h4>
+                        <a href="#">Sign out</a>
+                    </div>
+                    <nav class="navbar-sidebar2">
+                        <ul class="list-unstyled navbar__list">
+                            
+										<?php foreach($themeConfig['Post'] as $postType=>$postOption){ ?>
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="<?= $postOption['labels']['icon'] ?>"></i><?= $postOption['labels']['plural_name'] ?>
+                                <span class="arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </span>
+                            </a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
                          
                                 <?php if($postOption['add_new_link']){ ?>
 													  <li><a href="<?= ADMIN_URL.'/posttype/'.$postType.'/add' ?>">Add New</a></li>
@@ -49,14 +112,17 @@
                           <?php		} ?>
 															
                           <?php		} ?>
-                          <?php		} ?>  
+                          <?php		} ?>
+                          <?php if($postOption['view_all']){ ?>
+													<li><a href="<?= ADMIN_URL.'/posttype/'.$postType ?>">View All <?= ucfirst($postType) ?></a></li>
+													<?php } ?>  
                             </ul>
                         </li>
                     <?php } ?>
-                    </ul>
-                </nav>
-            </div>
-        </aside>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
         <?php /*
 <div class="col-md-3 left_col">
           <div class="left_col scroll-view">

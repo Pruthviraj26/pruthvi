@@ -1,7 +1,7 @@
 <?php
 
 $texonomy['categories'] = array(
-						'type'=>array('post','sliders','menu','pages','school'),
+						'type'=>array('post','sliders','menu','pages','schools'),
 						'option'=>array(
 						'hierarchical' => true,
 						'labels'=>array(
@@ -95,7 +95,23 @@ $post['post'] = array(
       'public' => true,
       'has_archive' => true,
       'rewrite' => array('slug' => 'school'),
+		);
+		
+
+		$post['students'] = array(
+      'labels' => array(
+        'name' => __( 'Student' ),
+        'icon' => 'fa fa-dot-circle-o',
+        'singular_name' => __( 'Student' ),
+        'plural_name' => __( 'Students' )
+      ),
+			'add_new_link'=>true,
+			'view_all'=>true,
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'students'),
     );
+
 
 
 $post['sliders'] = array(

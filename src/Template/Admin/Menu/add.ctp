@@ -16,50 +16,49 @@
                                 
 		
 		 														<div class="form-group">
-                                    <label for="mnu_href" class="col-sm-2 control-label">Menu</label>
-                                    <div class="col-sm-10">                                     
-																			<select name="terms[menu][]" class="form-control" id="menuCategory">
+                                    <label for="mnu_href" class="control-label">Menu</label>
+                                                                  
+																			<select class="form-control" id="menuCategory">
 																				<option value="">Select Menu</option>
 																				<?php foreach($menuList as $term) { ?>}
 																					<option value="<?= $term->id ?>"><?= ucfirst($term->name) ?></option>
 																				<?php } ?>
 																			</select>
-                                    </div>
+                                  
                                 </div>
 		
 		
                               <div class="form-group">
-                                    <label for="mnu_text" class="col-sm-2 control-label">Text</label>
-                                    <div class="col-sm-10">
+                                    <label for="mnu_text" class="control-label">Text</label>
+                               
                                         <div class="input-group">
                                             <input type="text" class="form-control" id="mnu_text" name="mnu_text" placeholder="Text">
                                             <div class="input-group-btn">
-                                                <button id="mnu_iconpicker" class="btn btn-default" data-iconset="fontawesome" data-icon="" type="button"></button>
+                                                <button id="mnu_iconpicker" class="au-btn--submit" data-iconset="fontawesome" data-icon="" type="button">icon</button>
                                             </div>
                                         </div>
-                                    </div>
+                                 
                                 </div>
                                 <div class="form-group">
-                                    <label for="mnu_href" class="col-sm-2 control-label">URL</label>
-                                    <div class="col-sm-10">
+                                    <label for="mnu_href" class="control-label">URL</label>
+                                   
                                         <input type="text" class="form-control" id="mnu_href" name="mnu_href" placeholder="URL">
-                                    </div>
+                               
                                 </div>
                                 <div class="form-group">
-                                    <label for="mnu_target" class="col-sm-2 control-label">Target</label>
-                                    <div class="col-sm-10">
+                                    <label for="mnu_target" class="control-label">Target</label>
+                                 
                                         <select id="mnu_target" name="mnu_target" class="form-control">
                                             <option value="_self">Self</option>
                                             <option value="_blank">Blank</option>
                                             <option value="_top">Top</option>
                                         </select>
-                                    </div>
+                               
                                 </div>
                                 <div class="form-group">
-                                    <label for="mnu_title" class="col-sm-2 control-label">Tooltip</label>
-                                    <div class="col-sm-10">
+                                    <label for="mnu_title" class="control-label">Tooltip</label>                                
                                         <input type="text" class="form-control" id="mnu_title" name="mnu_title" placeholder="Text">
-                                    </div>
+                           
                                 </div>
 															
 															

@@ -1,14 +1,13 @@
 <?php
 
+	$slidersTopOptions = ['Post.post_type'=>'sliders','Term.name'=>'Top','Parent.name'=>'Home Page'];
+	$slidersTop = $postByCategory->find()->contain(['Post','Term'=>['Parent']])->where($slidersTopOptions);
 
-$slidersTop = $postByCategory->find()->contain(['Post','Term'=>['Parent']])->where(['Post.post_type'=>'sliders','Term.name'=>'Top','Parent.name'=>'Home Page']);
+	$slidersBottom = ['Post.post_type'=>'sliders','Term.name'=>'Bottom','Parent.name'=>'Home Page'];
+	$slidersBottom = $postByCategory->find()->contain(['Post','Term'=>['Parent']])->where($slidersBottom);
 
-$slidersBottom = $postByCategory->find()->contain(['Post','Term'=>['Parent']])->where(['Post.post_type'=>'sliders','Term.name'=>'Bottom','Parent.name'=>'Home Page']);
-
-
-
-$homepagePost = $postByCategory->find()->contain(['Post'=>['seo'],'Term'])->where(['Post.post_type'=>'post','Term.name'=>'Home Page'])->toArray();
-
+	$homePageOptions = ['Post.post_type'=>'post','Term.name'=>'Home Page'];
+	$homepagePost = $postByCategory->find()->contain(['Post'=>['seo'],'Term'])->where($homePageOptions)->toArray();
 
 ?>
 
